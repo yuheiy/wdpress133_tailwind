@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "concurrently --raw \"npm:watch\" \"npm:serve\"",
+    "serve": "browser-sync . --watch --directory",
+    "build": "npm run build --workspaces",
+    "watch": "concurrently --raw \"npm run watch --workspace=auto-grid\" \"npm run watch --workspace=dynamic-colors\"",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "concurrently": "^7.6.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.4"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "private": true,
+  "workspaces": [
+    "auto-grid",
+    "dynamic-colors"
+  ]
+}

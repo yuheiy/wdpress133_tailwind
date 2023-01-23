@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "tailwind": "tailwindcss -i input.css -o output.css",
+    "build": "npm run tailwind -- --minify",
+    "watch": "npm run tailwind -- --watch"
+  },
+  "private": true
+}
